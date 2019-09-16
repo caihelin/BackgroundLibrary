@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 添加 tools:ignore="MissingPrefix" 可防止报红 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        tools:context=".MainActivity"
+        tools:ignore="MissingPrefix">
+
+        <!-- 普通的 TextView Style 样式 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="直接添加自定义属性，设置背景shape："
+            android:textSize="15sp" />
+
+        <!-- app:corners_radius : 边框半径 ; solid_color : 实心颜色 ; stroke_color : 线条的颜色 ; stroke_width : 线条宽度 -->
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="36dp"
+            android:gravity="center"
+            android:text="TextView"
+            android:textColor="#8c6822"
+            android:textSize="16sp"
+            app:corners_radius="10dp"
+            app:solid_color="#E3B666"
+            app:stroke_color="#8c6822"
+            app:stroke_width="2.5dp" />
+
+        <!-- app:gradient_startColor : 渐变开始的颜色 ; app:gradient_endColor : 渐变结束的颜色 ;  app:gradient_angle : 渐变的角度 -->
+        <!-- app:shape : 形状 -->
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="130dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:padding="0dp"
+            android:text="跳转到列表"
+            android:textColor="#4F94CD"
+            android:textSize="20sp"
+            app:corners_radius="20dp"
+            app:gradient_angle="0"
+            app:gradient_endColor="#4F94CD"
+            app:gradient_startColor="#63B8FF"
+            app:shape="rectangle" />
+
+        <!-- app:gradient_centerColor : 渐变的中间颜色 -->
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:padding="0dp"
+            android:text="确认"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:corners_radius="20dp"
+            app:gradient_angle="0"
+            app:gradient_centerColor="#CD4F39"
+            app:gradient_endColor="#CD2626"
+            app:gradient_startColor="#CD5B45"
+            app:shape="rectangle" />
+
+        <!-- app:gradient_useLevel -->
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="TextView"
+            android:textColor="#8c6822"
+            android:textSize="20sp"
+            app:corners_radius="4dp"
+            app:gradient_useLevel="true"
+            app:solid_color="#E3B666"
+            app:stroke_color="#8c6822"
+            app:stroke_dashGap="16dp"
+            app:stroke_dashWidth="10dp"
+            app:stroke_width="2dp" />
+
+        <!-- app:pressed_color 按下去的颜色效果 ; app:unpressed_color 没按下去时的颜色 -->
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:padding="0dp"
+            android:text="有点击反馈的按钮"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:corners_radius="20dp"
+            app:pressed_color="#7CCD7C"
+            app:shape="rectangle"
+            app:unpressed_color="#7CFC00" />
+
+        <!-- View -->
+        <View
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:textColor="#8c6822"
+            android:textSize="20sp"
+            app:shape="rectangle"
+            app:solid_color="#E3B666"
+            app:stroke_color="#8c6822"
+            app:stroke_dashGap="5dp"
+            app:stroke_dashWidth="10dp"
+            app:stroke_width="2dp" />
+
+        <!-- app:ripple_enable 水波纹可用 ; app:ripple_color 水波纹的颜色 -->
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:padding="0dp"
+            android:text="有波纹触摸反馈的按钮"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:corners_radius="20dp"
+            app:ripple_color="#71C671"
+            app:ripple_enable="true"
+            app:solid_color="#7CFC00"
+            app:stroke_color="#8c6822"
+            app:stroke_width="2dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="selector 用法："
+            android:textSize="15sp" />
+
+        <!-- app:pressed_drawable 按下去时的 drawable ; app:unPressed_drawable 没按下去时的 drawable -->
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            app:pressed_drawable="@drawable/circle_like_pressed"
+            app:unPressed_drawable="@drawable/circle_like_normal" />
+
+        <!-- -->
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:padding="0dp"
+            android:text="有波纹触摸反馈的按钮"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:corners_radius="20dp"
+            app:pressed_drawable="#71C671"
+            app:ripple_color="#71C671"
+            app:ripple_enable="true"
+            app:stroke_color="#8c6822"
+            app:stroke_width="2dp"
+            app:unPressed_drawable="#7CFC00" />
+
+        <!-- FrameLayout 容器 -->
+        <FrameLayout
+            android:id="@+id/fl_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp">
+
+        </FrameLayout>
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
